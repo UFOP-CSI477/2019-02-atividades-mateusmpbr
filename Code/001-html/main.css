@@ -1,0 +1,40 @@
+/* GERAL */
+.conteudo-principal {
+    background-image: linear-gradient(	#d3d3d3, #dcdcdc);
+    min-height: 100%;
+    padding: 4rem 2rem;
+}
+
+.titulo-principal {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+/* INDEX */
+.botao-ufop {
+    clear: right;
+}
+
+.elementos-rem {
+    margin: 1rem;
+}
+
+#img-principal {
+    top: 0;
+}
+
+/* CADASTRO */
+
+.label-cidade {
+    margin: 0.5rem 0rem;
+}
+
+.botao-padrao {
+    float: right;
+    margin: 0.15rem;
+}
+
+/* RELATÓRIO */
+tr:nth-child(even) {
+    background-color: #c6c6c6;
+}
