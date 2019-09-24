@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cadastro de Produto</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+    <h1>Cadastro de Produto</h1>
+    <form action="cadastro-produto.html" class="formulario">
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" placeholder="Nome do produto">
+        <br>
+        <label for="peso">Peso</label>
+        <input id="peso" name="peso" type="number" placeholder="Peso do produto">
+        <br>
+        <label for="unidadeMedida">Unidade de medida: </label>
+        <select name="unidadeMedida" id="UnidadeMedida">
+            <option value="0" disabled selected>Selecione...</option>
+            <option value="g">gramas</option>
+            <option value="kg">quilos</option>
+            <option value="t">toneladas</option>
+        </select>
+        <br>
+        <label for="Valor">Valor</label>
+        <input id="valor" name="valor" type="number" placeholder="Valor do produto">
+        <br>
+        <label for="estoqueInicial">Estoque Inicial</label>
+        <input id="estoqueInicial" name="estoqueInicial" type="number" placeholder="Estoque Inicial do produto">
+        <br>
+        <label for="mercadoInterno">
+            <input id="mercadoInterno" name="mercado" type="radio" value="mi">
+            Mercado Interno
+        </label>
+        <br>
+        <label for="mercadoExterno">
+            <input id="mercadoExterno" name="mercado" type="radio" value="me">
+            Mercado Externo
+        </label>
+        <br>
+        <label for="fornecedor">Fornecedor:</label>
+        <select name="fornecedor" id="fornecedor">
+            <option value="0" disabled selected>Selecione...</option>
+            <option value="fornA">Fornecedor A</option>
+            <option value="fornB">Fornecedor B</option>
+            <option value="fornC">Fornecedor C</option>
+        </select>
+        <br>
+        <button type="submit">Cadastrar</button>
+        <br>
+        <a href="index.html">Sair</a>
+    </form>
+</body>
+</html>
