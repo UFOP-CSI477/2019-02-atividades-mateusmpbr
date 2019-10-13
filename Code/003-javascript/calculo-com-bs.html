@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Cálculo - Validação com BS</title>
+    <script src="calculo-bs.js"></script>
+</head>
+<body>
+    <form name="dados" class="col-md-8">
+        <div class="form-group">
+            <label for="valor1" id="label1">Valor 1</label>
+            <input class="form-control" type="number" name="valor1" id="valor1" value="">
+            <div id="alerta1" class="alert alert-danger" style="display:none;">
+                <span>Preencha o primeiro valor corretamente!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="valor2" id="label2">Valor 2</label>
+            <input class="form-control" type="number" name="valor2" id="valor2" value="">
+            <div id="alerta2" class="alert alert-danger" style="display:none;">
+                <span>Preencha o segundo valor corretamente!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="resultado">Resultado</label>
+            <input class="form-control" type="text" name="resultado" id="resultado" value="">
+        </div>
+        <input class="btn btn-primary" type="button" onclick="calcular()" value="Calcular">
+    </form>
+</body>
+</html>
