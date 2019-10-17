@@ -1,7 +1,20 @@
-function validar(campo, alerta, label){
+function hasNumber(myString) {
+    return /\d/.test(myString);
+}
+
+function validar(campo, alerta, label, indicador){
+    console.log(campo)
+    console.log(alerta)
     let n = campo.value;
 
-    if(n.length == 0 || isNaN(parseFloat(n))){
+
+    if(indicador == "numero"){
+        condicaoInvalida = n.length == 0 || isNaN(parseFloat(n))
+    } else if(indicador == "texto"){
+        condicaoInvalida = n.length == 0 || hasNumber(n)
+    }
+
+    if(condicaoInvalida){
 
         //Erro
         //Exibir alerta:
@@ -26,12 +39,13 @@ function validar(campo, alerta, label){
         return true
 }
 
-function calcular(){
-    let n1 = document.dados.valor1;
-    let n2 = document.dados.valor2;
+function validaCampos(){
+    nome = document.dados.nome
+    peso = document.dados.peso
+    valor  = document.dados.valor
+    estoqueInicial = document.dados.estoqueInicial
+    botao = document.querySelector('button[type="submit"]')
 
-    if(validar(n1, "alerta1", "label1") && validar(n2, "alerta2", "label2")){
-        let res = parseFloat(n1.value) + parseFloat(n2.value);
-        document.dados.resultado.value = res;
-    }
+    // if ...
+    botao.setAtribute("type","button")
 }
