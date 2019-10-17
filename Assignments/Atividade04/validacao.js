@@ -39,13 +39,28 @@ function validar(campo, alerta, label, indicador){
         return true
 }
 
-function validaCampos(){
+function cadastrarProduto(){
     nome = document.dados.nome
     peso = document.dados.peso
     valor  = document.dados.valor
     estoqueInicial = document.dados.estoqueInicial
-    botao = document.querySelector('button[type="submit"]')
+    form = document.getElementById("form")
+    
+    if(validar(nome,"alerta1","nome","texto")
+    && validar(peso,"alerta2","peso","numero")
+    && validar(valor,"alerta3","valor","numero")
+    && validar(estoqueInicial,"alerta4","estoqueInicial","numero")){
+        form.submit();
+    }
+}
 
-    // if ...
-    botao.setAtribute("type","button")
+function cadastrarCliente(){
+    nome = document.dados.nome
+    sobrenome = document.dados.sobrenome
+    form = document.getElementById("form")
+
+    if(validar(nome,"alerta1","nome","texto")
+    && validar(sobrenome,"alerta2","sobrenome","texto")){
+        form.submit();
+    }
 }

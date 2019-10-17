@@ -9,14 +9,20 @@
 </head>
 <body>
     <h1>Cadastro de Cliente</h1>
-    <form action="cadastro-cliente.html" class="col-md-8">
+    <form action="cadastro-cliente.html" class="col-md-8" name="dados" id="form">
         <div class="form-group">
             <label for="nome">Nome</label>
             <input id="nome" name="nome" class="form-control" type="text" placeholder="Nome do cliente">
+            <div id="alerta1" class="alert alert-danger" style="display: none;">
+                <span>O nome deve ser preenchido, mas não deve conter números.</span>
+            </div>
         </div>
         <div class="form-group">
             <label for="sobrenome">Sobrenome</label>
             <input id="sobrenome" name="sobrenome" class="form-control" type="text" placeholder="Sobrenome do cliente">
+            <div id="alerta2" class="alert alert-danger" style="display: none;">
+                <span>O sobrenome deve ser preenchido, mas não deve conter números.</span>
+            </div>
         </div>
         <div class="form-group">
             <label for="email">E-mail</label>
@@ -38,7 +44,7 @@
             <label for="senha">Senha</label>
             <input id="senha" name="senha" class="form-control" type="password" placeholder="Senha do cliente">
         </div>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <button type="button" class="btn btn-primary" id="cadastrar" onclick="cadastrarCliente()">Cadastrar</button>
         <a href="index.html" class="btn btn-secondary">Sair</a>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

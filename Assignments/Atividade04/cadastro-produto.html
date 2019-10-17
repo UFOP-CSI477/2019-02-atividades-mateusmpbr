@@ -9,14 +9,20 @@
 </head>
 <body>
     <h1>Cadastro de Produto</h1>
-    <form action="cadastro-produto.html" class="col-md-8" name="dados">
+    <form action="cadastro-produto.html" class="col-md-8" name="dados" id="form">
         <div class="form-group">
             <label for="nome">Nome</label>
             <input id="nome" name="nome" class="form-control" type="text" placeholder="Nome do produto">
+            <div id="alerta1" class="alert alert-danger" style="display: none;">
+                <span>O nome deve ser preenchido, mas não deve conter números.</span>
+            </div>
         </div>
         <div class="form-group">
             <label for="peso">Peso</label>
             <input id="peso" name="peso" class="form-control" type="number" placeholder="Peso do produto">
+            <div id="alerta2" class="alert alert-danger" style="display: none;">
+                <span>O peso deve ser preenchido e só conter números</span>
+            </div>
         </div>
         <div class="form-group">
             <label for="unidadeMedida">Unidade de medida: </label>
@@ -30,10 +36,16 @@
         <div class="form-group"></div>
             <label for="Valor">Valor</label>
             <input id="valor" name="valor" class="form-control" type="number" placeholder="Valor do produto">
+            <div id="alerta3" class="alert alert-danger" style="display: none;">
+                <span>O valor deve ser preenchido e só conter números</span>
+            </div>
         </div>
         <div class="form-group"></div>
             <label for="estoqueInicial">Estoque Inicial</label>
             <input id="estoqueInicial" name="estoqueInicial" class="form-control" type="number" placeholder="Estoque Inicial do produto">
+            <div id="alerta4" class="alert alert-danger" style="display: none;">
+                <span>O estoque inicial deve ser preenchido e só conter números</span>
+            </div>
         </div>
         <div class="form-check mt-3">
             <input id="mercadoInterno" name="mercado" class="form-check-input" type="radio" value="mi">
@@ -52,7 +64,8 @@
                 <option value="fornC">Fornecedor C</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <!-- onclick="cadastrarProduto()" -->
+        <button type="submit" class="btn btn-primary" id="cadastrar">Cadastrar</button>
         <a href="index.html" class="btn btn-secondary">Sair</a>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
