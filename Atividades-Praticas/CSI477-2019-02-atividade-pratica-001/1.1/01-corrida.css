@@ -1,3 +1,13 @@
 .botoes {
     text-align: center;
 }
+
+.botao {
+    margin: 0.2rem;
+    transition: 0.2s;
+}
+
+.botao:hover {
+    transform: scale(1.10);
+    transition: 0.2s;
+}

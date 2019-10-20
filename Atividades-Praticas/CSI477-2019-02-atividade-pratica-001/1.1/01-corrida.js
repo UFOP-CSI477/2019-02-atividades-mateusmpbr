@@ -182,30 +182,4 @@ function colocacao(){
             tbodyCompleto.appendChild(tr)
         }
     }
-    // var tempos_em_valor = []
-
-    // for(i = 0; i < tempos.length; i++){
-    //     tempos_em_valor[i] = tempos[i].textContent
-    // }
-
-    //  sortWithIndexes(tempos_em_valor)
-    //  var indices_ordenados = tempos_em_valor.sortIndexes
-
-    //  var tempos_ordenados = tempos_em_valor.sort()
-
-    // resultados = []
-
-    // for(i = 0; i < competidores.length; i++){
-    //     resultados[i] = "-"
-    // }
-
-    // for(i = 0; i < competidores.length; i++){
-    //     resultados[i] = "Vencedor(a)!"
-    //     if(i + 1 < competidores.length){
-    //         if(tempos_ordenados[i + 1] > tempos_ordenados[i]) break
-    //     }
-    // }
-
-    
-
 }
