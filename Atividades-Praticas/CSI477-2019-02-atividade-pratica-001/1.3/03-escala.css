@@ -1,0 +1,22 @@
+body {
+    background-color: #e9ecef;
+}
+
+.titulo-principal {
+    font-size: 200%;
+    margin: 1.5rem 0;
+}
+
+.botao {
+    margin: 0.2rem;
+    transition: 0.2s;
+}
+
+.botao:hover {
+    transform: scale(1.10);
+    transition: 0.2s;
+}
+
+.meu-alerta {
+    margin-top: 1.5rem;
+}

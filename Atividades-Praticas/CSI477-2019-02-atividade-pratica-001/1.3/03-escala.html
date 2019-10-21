@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="03-escala.css">
+    <title>Escala Richter</title>
+</head>
+<body>
+    <div class="container col-md-6">
+        <h1 class="text-center titulo-principal">Classificação - Escala Richter</h1>
+        <form name="dados" id="dados">
+            <div id="alerta-campos" class="alert alert-danger" style="display: none;">
+                <span>Todos os campos devem ser preenchidos corretamente</span>
+            </div>
+            <div class="form-group">
+                <label for="amplitude">Amplitude (mm)</label>
+                <input id="amplitude" name="amplitude" class="form-control" type="number" placeholder="Amplitude medida com sismógrafo" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="intervalo">Intervalo de tempo (s)</label>
+                <input id="intervalo" name="intervalo" class="form-control" type="number" placeholder="Intervalo de tempo entre onda superficial e onda de pressão máxima" step="0.01" required>
+            </div>
+            <button type="button" class="btn btn-primary botao" onclick="classificar()">Classificar</button>
+        </form>
+        <div id="alerta-classificacao" class="alert meu-alerta" style="display: none;">
+            <span id="span-alerta-classificacao"></span>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="03-escala.js"></script>
+</body>
+</html>

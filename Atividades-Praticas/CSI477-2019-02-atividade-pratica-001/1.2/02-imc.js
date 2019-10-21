@@ -36,8 +36,6 @@ function calcular(){
         valorPeso = peso.value
 
         imc = valorPeso/(valorAltura*valorAltura)
-        
-        console.log(imc)
 
         if(imc < 18.5){
             situacao = "Subnutrição"
