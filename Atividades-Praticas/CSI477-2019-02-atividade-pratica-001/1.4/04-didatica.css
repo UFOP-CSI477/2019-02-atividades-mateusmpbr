@@ -1,0 +1,52 @@
+body {
+    background-color: #e9ecef;
+}
+
+.titulo-principal {
+    background-color: #ffffff;
+    border: solid 1.5px #212529;
+    border-radius: 30px;
+    font-size: 150%;
+    margin: 1.5rem 0 2.5rem 0;
+    padding: 1rem;
+}
+
+.titulo-secundario {
+    background-color: #d4e5f1;
+    border: solid 1.5px #212529;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 125%;
+    margin: 0 0 0 1.5rem;
+    padding: 1rem;
+}
+
+.radios {
+    margin-top: 2rem;
+}
+
+.radios label {
+    font-size: 110%;
+    font-weight: 500;
+}
+
+.img-grupos {
+    border: solid 1px #212529;
+    border-radius: 5px;
+    display: block;
+    margin: 0.25rem 0 1rem -1rem;
+}
+
+.botao {
+    margin: 0.2rem;
+    transition: 0.2s;
+}
+
+.botao:hover {
+    transform: scale(1.10);
+    transition: 0.2s;
+}
+
+.meu-alerta {
+    margin-top: 1.5rem;
+}

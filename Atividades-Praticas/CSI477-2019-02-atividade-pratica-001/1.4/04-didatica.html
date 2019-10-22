@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="04-didatica.css">
+    <title>Atividade para crianças</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center titulo-principal">Ei! Vamos jogar? Qual palavra não pertence a cada um dos grupos?</h1>
+        <div class="row"> 
+            <div name="dados1" id="dados1" class="col">
+                <h2 class="titulo-secundario">Grupo 1</h2>
+                <div class="radios">
+                    <div class="form-check">
+                        <input id="arroz" name="grupo1" class="form-check-input" type="radio" value="arroz">
+                        <label for="arroz" class="form-check-label">Arroz</label>
+                        <img src="img/grupo1/arroz.jpg" alt="Arroz" width="150" height="150" class="img-grupos">
+                    </div>
+                    <div class="form-check">
+                        <input id="sabonete" name="grupo1" class="form-check-input" type="radio" value="sabonete">
+                        <label for="sabonete" class="form-check-label">Sabonete</label>
+                        <img src="img/grupo1/sabonete.jpg" alt="Sabonete" width="150" height="150" class="img-grupos">
+                    </div>
+                    <div class="form-check">
+                        <input id="feijao" name="grupo1" class="form-check-input" type="radio" value="feijao">
+                        <label for="feijao" class="form-check-label">Feijão</label>
+                        <img src="img/grupo1/feijao.jpg" alt="Feijão" width="150" height="150" class="img-grupos">
+                    </div>
+                    <div class="form-check">
+                        <input id="batata" name="grupo1" class="form-check-input" type="radio" value="batata">
+                        <label for="batata" class="form-check-label">Batata</label>
+                        <img src="img/grupo1/batata.jpg" alt="Batata" width="150" height="150" class="img-grupos">
+                    </div>
+                </div>
+                <div id="alerta1" class="alert meu-alerta" style="display: none;">
+                    <span id="span1"></span>
+                </div>
+            </div>
+            <div name="dados2" id="dados2" class="col">
+                <h2 class="titulo-secundario">Grupo 2</h2>
+                <div class="radios">
+                    <div class="form-check">
+                        <input id="bicicleta" name="grupo2" class="form-check-input" type="radio" value="bicicleta">
+                        <label for="bicicleta" class="form-check-label">Bicicleta</label>
+                        <img src="img/grupo2/bicicleta.jpg" alt="bicicleta" width="150" height="150" class="img-grupos">
+                    </div>
+                    <div class="form-check">
+                        <input id="carro" name="grupo2" class="form-check-input" type="radio" value="carro">
+                        <label for="carro" class="form-check-label">Carro</label>
+                        <img src="img/grupo2/carro.jpg" alt="Carro" width="150" height="150" class="img-grupos">
+                    </div>
+                    <div class="form-check">
+                        <input id="algodao-doce" name="grupo2" class="form-check-input" type="radio" value="algodao-doce">
+                        <label for="algodao-doce" class="form-check-label">Algodão Doce</label>
+                        <img src="img/grupo2/algodao-doce.jpg" alt="Algodão Doce" width="150" height="150" class="img-grupos">
+                    </div>
+                    <div class="form-check">
+                        <input id="moto" name="grupo2" class="form-check-input" type="radio" value="moto">
+                        <label for="moto" class="form-check-label">Moto</label>
+                        <img src="img/grupo2/moto.jpg" alt="Moto" width="150" height="150" class="img-grupos">
+                    </div>
+                </div>
+                <div id="alerta2" class="alert meu-alerta" style="display: none;">
+                    <span id="span2"></span>
+                </div>
+            </div>
+            <div name="dados3" id="dados3" class="col">
+                <h2 class="titulo-secundario">Grupo 3</h2>
+                <div class="radios">
+                    <div class="form-check">
+                        <input id="oculos" name="grupo3" class="form-check-input" type="radio" value="oculos">
+                        <label for="oculos" class="form-check-label">Óculos</label>
+                        <img src="img/grupo3/oculos.jpg" alt="Óculos" width="150" height="150" class="img-grupos">
+                    </div>
+                    <div class="form-check">
+                        <input id="cadeira-de-praia" name="grupo3" class="form-check-input" type="radio" value="cadeira-de-praia">
+                        <label for="cadeira-de-praia" class="form-check-label">Cadeira de praia</label>
+                        <img src="img/grupo3/cadeira-de-praia.jpg" alt="Cadeira de praia" width="150" height="150" class="img-grupos">
+                    </div>
+                    <div class="form-check">
+                        <input id="sombrinha" name="grupo3" class="form-check-input" type="radio" value="sombrinha">
+                        <label for="sombrinha" class="form-check-label">Sombrinha</label>
+                        <img src="img/grupo3/sombrinha.jpg" alt="Sombrinha" width="150" height="150" class="img-grupos">
+                    </div>
+                    <div class="form-check">
+                        <input id="maquina-de-lavar" name="grupo3" class="form-check-input" type="radio" value="maquina-de-lavar">
+                        <label for="maquina-de-lavar" class="form-check-label">Máquina de lavar</label>
+                        <img src="img/grupo3/maquina-de-lavar.jpg" alt="Máquina de lavar" width="150" height="150" class="img-grupos">
+                    </div>
+                </div>
+                <div id="alerta3" class="alert meu-alerta" style="display: none;">
+                    <span id="span3"></span>
+                </div>
+            </div>
+            <div name="dados4" id="dados4" class="col">
+                <h2 class="titulo-secundario">Grupo 4</h2>
+                <div class="radios">
+                    <div class="form-check">
+                        <input id="bola" name="grupo4" class="form-check-input" type="radio" value="bola">
+                        <label for="bola" class="form-check-label">Bola</label>
+                        <img src="img/grupo4/bola.jpg" alt="Bola" width="150" height="150" class="img-grupos">
+                    </div>
+                    <div class="form-check">
+                        <input id="skate" name="grupo4" class="form-check-input" type="radio" value="skate">
+                        <label for="skate" class="form-check-label">Skate</label>
+                        <img src="img/grupo4/skate.jpg" alt="Skate" width="150" height="150" class="img-grupos">
+                    </div>
+                    <div class="form-check">
+                        <input id="patins" name="grupo4" class="form-check-input" type="radio" value="patins">
+                        <label for="patins" class="form-check-label">Patins</label>
+                        <img src="img/grupo4/patins.jpg" alt="Patins" width="150" height="150" class="img-grupos">
+                    </div>
+                    <div class="form-check">
+                        <input id="chave-de-fenda" name="grupo4" class="form-check-input" type="radio" value="chave-de-fenda">
+                        <label for="chave-de-fenda" class="form-check-label">Chave de fenda</label>
+                        <img src="img/grupo4/chave-de-fenda.jpg" alt="Chave de fenda" width="150" height="150" class="img-grupos">
+                    </div>
+                </div>
+                <div id="alerta4" class="alert meu-alerta" style="display: none;">
+                    <span id="span4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="text-center my-5">
+            <button type="button" class="btn btn-primary btn-lg" onclick="resultado()">Resultado</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="04-didatica.js"></script>
+</body>
+</html>
