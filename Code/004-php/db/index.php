@@ -19,3 +19,15 @@ $strConnection = "mysql:host=$dbhost;dbname=$dbname";
 $connection = new PDO($strConnection,$dbuser,$dbpassword);
 
 var_dump($connection);
+
+// Controller -> Model
+$estados = $connection->query("SELECT * FROM estados");
+
+var_dump($estados);
+
+// Regras de negócio ...
+
+// View -> método view('arquivo',dados);
+// Incluir o arquivo:
+
+require 'estados_view.php';
