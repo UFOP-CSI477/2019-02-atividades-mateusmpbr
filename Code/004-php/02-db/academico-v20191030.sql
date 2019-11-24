@@ -14,8 +14,6 @@ SET time_zone = "+00:00";
 
 CREATE DATABASE IF NOT EXISTS `academico` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-/* DROP USER `sistemaweb`@`localhost`; */
-
 CREATE USER `sistemaweb`@`localhost` identified by "123456";
 GRANT ALL PRIVILEGES ON academico.* TO `sistemaweb`@`localhost`;
 
