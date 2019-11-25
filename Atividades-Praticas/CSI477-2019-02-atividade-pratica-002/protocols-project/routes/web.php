@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','AreaGeralController@index')->name('area_geral.index');
+Route::get('/areaUsuario','AreaUsuarioController@index')->name('area_usuario.index');
+Route::get('/areaAdministrador','AreaAdministradorController@index')->name('area_administrador.index');
 
 Auth::routes();
 
