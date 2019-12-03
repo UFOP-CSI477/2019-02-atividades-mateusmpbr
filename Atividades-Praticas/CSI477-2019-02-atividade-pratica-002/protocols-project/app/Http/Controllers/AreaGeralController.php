@@ -9,6 +9,6 @@ class AreaGeralController extends Controller
 {
     public function index(){
         $subjects = DB::table('subjects')->orderBy('name')->get();
-        return view('area_geral', compact('subjects'));
+        return view('geral.index', compact('subjects'));
     }
 }

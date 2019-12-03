@@ -20,10 +20,10 @@
                 <a class="nav-link" href="/">Área Geral</a>
             </li>
             <li class="nav-item active">                
-                <a class="nav-link" href="/areaUsuario">Área do Usuário</a>
+                <a class="nav-link" href="/usuario/login">Área do Usuário</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="/areaAdministrador">Área do Administrador</a>
+                <a class="nav-link" href="/administrador/login">Área do Administrador</a>
             </li>
         </div>
     </nav>

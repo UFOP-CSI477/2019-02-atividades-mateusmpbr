@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 
 class AreaUsuarioController extends Controller
 {
-    public function index(){
-        return view('area_usuario');
+    public function login(){
+        return view('usuario.login');
+    }
+
+    public function register(){
+        return view ('usuario.register');
     }
 }

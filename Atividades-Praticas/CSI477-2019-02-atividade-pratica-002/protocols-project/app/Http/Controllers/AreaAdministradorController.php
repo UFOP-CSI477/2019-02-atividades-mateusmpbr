@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class AreaAdministradorController extends Controller
 {
-    public function index(){
-        return view('area_administrador');
+    public function login(){
+        return view('administrador.login');
     }
 }

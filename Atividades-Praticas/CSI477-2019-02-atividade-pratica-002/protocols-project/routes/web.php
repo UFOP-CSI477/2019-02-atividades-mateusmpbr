@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/','AreaGeralController@index')->name('area_geral.index');
-Route::get('/areaUsuario','AreaUsuarioController@index')->name('area_usuario.index');
-Route::get('/areaAdministrador','AreaAdministradorController@index')->name('area_administrador.index');
+Route::get('/','AreaGeralController@index')->name('geral.index');
+Route::get('/usuario/login','AreaUsuarioController@login')->name('usuario.login');
+Route::get('/usuario/register','AreaUsuarioController@register')->name('usuario.register');
+Route::get('/administrador/login','AreaAdministradorController@login')->name('administrador.login');
 
 Auth::routes();
 
-Route::get('/home', function() {
-    return view('home');
-})->name('home')->middleware('auth');
+// Route::get('/home', function() {
+//     return view('home');
+// })->name('home')->middleware('auth');
