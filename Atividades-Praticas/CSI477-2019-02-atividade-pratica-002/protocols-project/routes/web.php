@@ -16,8 +16,18 @@ Route::get('/usuario/login','AreaUsuarioController@login')->name('usuario.login'
 Route::get('/usuario/register','AreaUsuarioController@register')->name('usuario.register');
 Route::get('/administrador/login','AreaAdministradorController@login')->name('administrador.login');
 
+Route::group(['middleware' => ['auth']],function(){
+    
+    Route::group(['middleware' => ['admin']], function(){
+        Route::get('/administrador/index','AreaAdministradorController@index')->name('administrador.index');
+    });
+
+    Route::get('/usuario/index','AreaUsuarioController@index')->name('usuario.index');    
+
+});
+
 Auth::routes();
 
-// Route::get('/home', function() {
-//     return view('home');
-// })->name('home')->middleware('auth');
+Route::get('/home', function() {
+    return view('home');
+})->name('home')->middleware('auth');

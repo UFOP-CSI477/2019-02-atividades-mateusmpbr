@@ -26,7 +26,7 @@
 @section('body')
     <div class="register-box">
         <div class="register-logo">
-            <a href="{{ $dashboard_url }}"><b>Área do Usuário</b></a>
+            <a href="{{route('usuario.register')}}"><b>Área do Usuário</b></a>
         </div>
         <div class="card">
             <div class="card-body register-card-body">

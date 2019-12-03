@@ -13,4 +13,9 @@ class AreaUsuarioController extends Controller
     public function register(){
         return view ('usuario.register');
     }
+
+    public function index(){
+        return view('usuario.index');
+    }
+
 }
