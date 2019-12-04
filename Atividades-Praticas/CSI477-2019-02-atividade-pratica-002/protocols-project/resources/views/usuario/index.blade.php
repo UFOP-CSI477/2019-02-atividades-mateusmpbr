@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="row" style="overflow:auto">
+        @if (Session::has('menssagem'))
+            <div class="alert {{Session::get('classe-alerta','alert-info')}}">{{Session::get('menssagem')}}</div>
+        @endif
         <table class="table text-center">
             <thead class="thead-light">
                 <tr>
@@ -30,6 +33,16 @@
                     </tr>
                 @endforeach
             </tbody>
+            <tfoot class="footer-tabela">
+                <tr>
+                    <td colspan="3"><b>Quantidade de requerimentos</b></td>
+                    <td colspan="2">{{$qtdRequests}}</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><b>Valor total</b></td>
+                    <td colspan="2">{{$valorTotal}}</td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 

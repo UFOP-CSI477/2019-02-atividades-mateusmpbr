@@ -154,6 +154,12 @@
                                 <p>Listar Requerimentos</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('usuario.listar_protocolos')}}">
+                                <i class="fas fa-fw fa-file-contract "></i>
+                                <p>Listar Protocolos</p>
+                            </a>
+                        </li>
                         {{-- @each('adminlte::partials.menu-item', $adminlte->menu(), 'item') --}}
                     </ul>
                 </nav>

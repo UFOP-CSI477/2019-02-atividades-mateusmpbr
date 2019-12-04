@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Subject;
+use App\User;
+use Session;
 
 class AreaUsuarioController extends Controller
 {
@@ -16,9 +18,13 @@ class AreaUsuarioController extends Controller
     }
 
     public function index(){
-        $requests = \App\Request::orderBy('date')->get();
+        $requests = \App\Request::where('user_id',auth()->user()->id)->orderBy('date')->get();
         $subjects = Subject::orderBy('name')->get();
-        return view('usuario.index',compact('requests','subjects'));
+
+        $qtdRequests = \App\Request::count();
+        $valorTotal = \App\Request::join('subjects','requests.subject_id','=','subjects.id')->sum('price');
+
+        return view('usuario.index',compact('requests','subjects','qtdRequests','valorTotal'));
     }
 
     public function criarRequerimento(){
@@ -35,6 +41,9 @@ class AreaUsuarioController extends Controller
 
         $requestObj->save();
 
+        Session::flash('menssagem','Requerimento criado com sucesso.');
+        Session::flash('classe-alerta', 'alert-success');
+
         return redirect('usuario/index');
     }
 
@@ -46,6 +55,9 @@ class AreaUsuarioController extends Controller
 
         $requestObj->save();
 
+        Session::flash('menssagem','Requerimento editado com sucesso.');
+        Session::flash('classe-alerta', 'alert-success');
+
         return redirect('usuario/index');
     }
 
@@ -53,6 +65,15 @@ class AreaUsuarioController extends Controller
         $requestObj = \App\Request::findOrFail($request->id);
         $requestObj->delete();
 
+        Session::flash('menssagem','Requerimento excluído com sucesso.');
+        Session::flash('classe-alerta', 'alert-success');
+
         return redirect('usuario/index'); 
+    }
+
+    public function listarProtocolos(){
+        $subjects = Subject::orderBy('name')->get();
+
+        return view('usuario.listar_protocolos',compact('subjects'));
     }
 }
