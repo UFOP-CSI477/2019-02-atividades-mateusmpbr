@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Request extends Model
 {
+
+    // protected $fillable = [
+
+    // ];
+
     // Request -> Subject (N:1)
     public function subject(){
         return $this->belongsTo('App\Subject');

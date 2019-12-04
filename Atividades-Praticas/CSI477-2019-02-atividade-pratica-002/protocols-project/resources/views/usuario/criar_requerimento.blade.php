@@ -5,7 +5,8 @@
         <div class="col-10 offset-1">
             <div class="card">
                 <div class="card-body">
-                    <form action="#" method="post">
+                    <form action="{{route('usuario.inserir_requerimento')}}" method="post">
+                        @csrf
                         <div class="form-group">
                             <label for="tipo">Tipo</label>
                             <select name="tipo" id="tipo" class="form-control" required>
@@ -16,7 +17,7 @@
                         </div>
                         <div class="form-group">
                             <label for="data">Data</label>
-                            <input class="form-control" name="data" type="date" placeholder="Insira a descrição aqui" required>
+                            <input class="form-control" name="data" type="date" placeholder="Insira a data aqui" required>
                         </div>
                         <div class="form-group">
                             <label for="descricao">Descrição</label>

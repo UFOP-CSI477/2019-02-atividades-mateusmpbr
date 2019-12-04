@@ -24,7 +24,9 @@ Route::group(['middleware' => ['auth']],function(){
 
     Route::get('/usuario/index','AreaUsuarioController@index')->name('usuario.index');
     Route::get('/usuario/requerimento/criar','AreaUsuarioController@criarRequerimento')->name('usuario.criar_requerimento');  
-
+    Route::post('/usuario/requerimento/criar','AreaUsuarioController@inserirRequerimento')->name('usuario.inserir_requerimento'); 
+    Route::post('/usuario/requerimento/editar','AreaUsuarioController@editarRequerimento')->name('usuario.editar_requerimento');
+    Route::post('/usuario/requerimento/excluir','AreaUsuarioController@excluirRequerimento')->name('usuario.excluir_requerimento');  
 });
 
 Auth::routes();
