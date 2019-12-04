@@ -1,7 +1,7 @@
 @extends('usuario.principal')
 
 @section('content')
-    <div class="row">
+    <div class="row" style="overflow:auto">
         <table class="table text-center">
             <thead class="thead-light">
                 <tr>
