@@ -21,8 +21,10 @@ class AreaUsuarioController extends Controller
         $requests = \App\Request::where('user_id',auth()->user()->id)->orderBy('date')->get();
         $subjects = Subject::orderBy('name')->get();
 
-        $qtdRequests = \App\Request::count();
-        $valorTotal = \App\Request::join('subjects','requests.subject_id','=','subjects.id')->sum('price');
+        $qtdRequests = \App\Request::where('user_id',auth()->user()->id)->count();
+        $valorTotal = \App\Request::join('subjects','requests.subject_id','=','subjects.id')
+                        ->where('user_id',auth()->user()->id)
+                        ->sum('price');
 
         return view('usuario.index',compact('requests','subjects','qtdRequests','valorTotal'));
     }

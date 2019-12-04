@@ -20,6 +20,10 @@ Route::group(['middleware' => ['auth']],function(){
     
     Route::group(['middleware' => ['admin']], function(){
         Route::get('/administrador/index','AreaAdministradorController@index')->name('administrador.index');
+        Route::get('/administrador/protocolo/criar','AreaAdministradorController@criarProtocolo')->name('administrador.criar_protocolo');
+        Route::post('/administrador/protocolo/criar','AreaAdministradorController@inserirProtocolo')->name('administrador.inserir_protocolo');
+        Route::post('/administrador/protocolo/editar','AreaAdministradorController@editarProtocolo')->name('administrador.editar_protocolo');
+        Route::post('/administrador/protocolo/excluir','AreaAdministradorController@excluirProtocolo')->name('administrador.excluir_protocolo');
     });
 
     Route::get('/usuario/index','AreaUsuarioController@index')->name('usuario.index');
