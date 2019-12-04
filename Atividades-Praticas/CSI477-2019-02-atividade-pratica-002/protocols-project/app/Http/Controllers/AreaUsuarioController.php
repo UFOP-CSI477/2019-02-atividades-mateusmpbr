@@ -16,7 +16,7 @@ class AreaUsuarioController extends Controller
     }
 
     public function index(){
-        $requests = \App\Request::all();
+        $requests = \App\Request::orderBy('date')->get();
         $subjects = Subject::orderBy('name')->get();
         return view('usuario.index',compact('requests','subjects'));
     }
