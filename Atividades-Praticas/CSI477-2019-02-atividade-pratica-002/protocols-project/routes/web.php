@@ -22,12 +22,13 @@ Route::group(['middleware' => ['auth']],function(){
         Route::get('/administrador/index','AreaAdministradorController@index')->name('administrador.index');
     });
 
-    Route::get('/usuario/index','AreaUsuarioController@index')->name('usuario.index');    
+    Route::get('/usuario/index','AreaUsuarioController@index')->name('usuario.index');
+    Route::get('/usuario/requerimento/criar','AreaUsuarioController@criarRequerimento')->name('usuario.criar_requerimento');  
 
 });
 
 Auth::routes();
 
-Route::get('/home', function() {
-    return view('home');
-})->name('home')->middleware('auth');
+// Route::get('/home', function() {
+//     return view('home');
+// })->name('home')->middleware('auth');

@@ -17,7 +17,7 @@ class CreateRequestsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
             $table->bigInteger('subject_id');
-            $table->binary('description');
+            $table->text('description');
             $table->date('date');
 
             $table->foreign('user_id')->references('id')->on('users');

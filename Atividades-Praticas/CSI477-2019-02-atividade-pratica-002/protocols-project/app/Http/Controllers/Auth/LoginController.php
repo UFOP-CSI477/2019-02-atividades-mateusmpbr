@@ -51,15 +51,5 @@ class LoginController extends Controller
         } 
 
         return 'usuario/index';
-
-        // if(auth()->user()->type == 1 && strcmp(Route::currentRouteName(), 'administrador.login'))
-        // {
-        //     return 'administrador/index';
-        // }elseif(auth()->user()->type == 2 && strcmp(Route::currentRouteName(), 'usuario.login'))
-        // {
-        //     return 'usuario/index';
-        // } 
-
-        // return '/';
     }
 }

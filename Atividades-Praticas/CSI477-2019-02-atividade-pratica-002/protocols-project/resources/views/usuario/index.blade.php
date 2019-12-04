@@ -1,19 +1,26 @@
-@extends('adminlte::page')
-
-@section('title', 'AdminLTE')
-
-@section('content_header')
-    <h1 class="m-0 text-dark">Dashboard</h1>
-@stop
+@extends('usuario.principal')
 
 @section('content')
     <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <p class="mb-0">You are logged in!</p>
-                </div>
-            </div>
-        </div>
+        <table class="table text-center">
+            <thead class="thead-light">
+                <tr>
+                <th scope="col">Tipo</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Data</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($requests as $request)
+                    <td>{{$request->subject->name}}</td>
+                    <td><img src="data:image/jpeg;base64,{{base64_encode($request->description)}}"/></td>
+                    <td>{{$request->date}}</td>
+                    <td><a class="btn btn-success" href="" style="margin-left:50px;">Editar</a></td>
+                    <td><a class="btn btn-danger" href="" style="margin-left:-50px;">Excluir</a></td>
+                @endforeach
+            </tbody>
+        </table>
     </div>
-@stop
+@endsection
