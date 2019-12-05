@@ -39,6 +39,6 @@ class User extends Authenticatable
 
     // User -> Request (1:N)
     public function requests(){
-        return $this->hasMany('App\User');
+        return $this->hasMany('App\Request');
     }
 }
