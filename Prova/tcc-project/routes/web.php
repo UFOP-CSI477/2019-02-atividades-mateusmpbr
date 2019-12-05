@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','GeralController@index');
+Route::get('/geral/index','AlunoController@index');
+Route::post('/geral/index','AlunoController@buscarPorArea');
+Route::get('/geral/projetos','AlunoController@listarProjetos');
+Route::get('/administrador/login','UserController@login');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
