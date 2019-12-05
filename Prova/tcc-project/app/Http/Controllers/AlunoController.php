@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Professor;
+use App\Projeto;
 use Session;
 
 class AlunoController extends Controller
@@ -13,7 +14,14 @@ class AlunoController extends Controller
     }
 
     public function listarProjetos(){
-        return view('geral.listar_projetos');
+
+        $projetos = Projeto::join('alunos','projetos.aluno_id','=','alunos.id')
+                        ->orderBy('ano','desc')
+                        ->orderBy('semestre','desc')
+                        ->orderBy('alunos.nome','asc')
+                        ->get();
+
+        return view('geral.listar_projetos',compact('projetos'));
     }
 
     public function buscarPorArea(Request $request){

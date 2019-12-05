@@ -6,24 +6,33 @@
 <table class="table">
   <thead class="thead-dark">
     <tr>
-      aaaaa
-      {{-- <th scope="col">Nome</th>
-      <th scope="col">Preço</th> --}}
+      <th scope="col">Id</th>
+      <th scope="col">Ano</th>
+      <th scope="col">Semestre</th>
+      <th scope="col">Professor</th>
+      <th scope="col">Estudante</th>
+      <th scope="col">Título</th>
+      <th scope="col">Área</th>
     </tr>
   </thead>
   <tbody>
-      {{-- @if ($subjects->isEmpty())
+      @if ($projetos->isEmpty())
         <tr>
-          <td colspan="2" class="text-center">Não há tipos de protocolos cadastrados</td>
+          <td colspan="7" class="text-center">Não há projetos cadastrados</td>
         </tr>
       @else
-        @foreach ($subjects as $subject)
+        @foreach ($projetos as $projeto)
             <tr>
-                <td>{{$subject->name}}</td>
-                <td>{{$subject->price}}</td>
+                <td>{{$projeto->id}}</td>
+                <td>{{$projeto->ano}}</td>
+                <td>{{$projeto->semestre}}</td>
+                <td>{{$projeto->professor->nome}}</td>
+                <td>{{$projeto->aluno->nome}}</td>
+                <td>{{$projeto->titulo}}</td>
+                <td>{{$projeto->professor->area}}</td>
             </tr>
         @endforeach
-      @endif --}}
+      @endif
   </tbody>
 </table>
 @endsection
