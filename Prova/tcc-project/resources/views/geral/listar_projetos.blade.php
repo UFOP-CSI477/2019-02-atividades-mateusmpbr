@@ -2,6 +2,10 @@
 
 @section('titulo','Área Geral - Estudantes')
 
+@if (Session::has('menssagem'))
+<div class="alert mt-1 {{Session::get('classe-alerta','alert-info')}}">{{Session::get('menssagem')}}</div>
+@endif
+
 @section('conteudo')
 <table class="table">
   <thead class="thead-dark">

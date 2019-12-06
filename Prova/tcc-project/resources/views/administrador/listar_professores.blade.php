@@ -13,15 +13,15 @@
       <tr>
         <th scope="col">Id</th>
         <th scope="col">Nome</th>
-        <th scope="col">Curso</th>
+        <th scope="col">Área</th>
       </tr>
     </thead>
     <tbody>
-      @foreach ($alunos as $aluno)
+      @foreach ($professores as $professor)
           <tr>
-              <td>{{$aluno->id}}</td>
-              <td>{{$aluno->nome}}</td>
-              <td>{{$aluno->curso}}</td>
+              <td>{{$professor->id}}</td>
+              <td>{{$professor->nome}}</td>
+              <td>{{$professor->area}}</td>
           </tr>
       @endforeach
     </tbody>

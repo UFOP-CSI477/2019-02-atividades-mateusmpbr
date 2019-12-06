@@ -13,7 +13,7 @@
   <label class="mt-1" for="area"><b>Informe a área de seu interesse</b></label>
   <div class="form-inline mb-3">
     <input class="form-control" type="text" name="area" id="area">
-    <button class="btn btn-dark ml-2" type="submit">Buscar</button>
+    <button class="btn btn-dark m-1" type="submit">Buscar</button>
   </div>
 </form>
 

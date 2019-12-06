@@ -16,10 +16,10 @@
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
             <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/geral/index">Área Geral (Estudantes)</a>
+                <a class="nav-link" href="/geral/index">Área Geral | Estudantes</a>
             </li>
             <li class="nav-item active">                
-                <a class="nav-link" href="/administrador/login">Área Administrativa (Colegiado)</a>
+                <a class="nav-link" href="/administrador/login">Área Administrativa | Colegiado</a>
             </li>
         </div>
     </nav>

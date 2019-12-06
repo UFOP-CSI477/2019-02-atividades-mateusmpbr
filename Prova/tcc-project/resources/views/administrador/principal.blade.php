@@ -12,10 +12,12 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Área Geral</div>
+            <div class="sidebar-heading">Área Administrativa</div>
             <div class="list-group list-group-flush">
-            <a href="/geral/index" class="list-group-item list-group-item-action bg-light">Professores</a>
-            <a href="/geral/projetos" class="list-group-item list-group-item-action bg-light">Projetos</a>
+            <a href="/administrador/index" class="list-group-item list-group-item-action bg-light">Alunos</a>
+            <a href="/administrador/professores" class="list-group-item list-group-item-action bg-light">Professores</a>
+            <a href="/administrador/projeto" class="list-group-item list-group-item-action bg-light">Incluir Projeto</a>
+            <a href="/administrador/logout" class="list-group-item list-group-item-action bg-light">Logout</a>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->

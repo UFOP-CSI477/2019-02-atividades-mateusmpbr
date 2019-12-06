@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Professor;
-use App\Projeto;
-use Session;
+use App\Aluno;
 
 class AlunoController extends Controller
 {
@@ -13,22 +11,12 @@ class AlunoController extends Controller
         return view('geral.index');
     }
 
-    public function listarProjetos(){
+    public function listarAlunos(){
 
-        $projetos = Projeto::join('alunos','projetos.aluno_id','=','alunos.id')
-                        ->orderBy('ano','desc')
-                        ->orderBy('semestre','desc')
-                        ->orderBy('alunos.nome','asc')
+        $alunos = Aluno::orderBy('curso','asc')
+                        ->orderBy('nome','asc')
                         ->get();
 
-        return view('geral.listar_projetos',compact('projetos'));
-    }
-
-    public function buscarPorArea(Request $request){
-        $area = $request->area;
-
-        $professores = Professor::where('area','like',"%$area%")->get();
-
-        return view('/geral/index',compact('professores'));
+        return view('administrador.index',compact('alunos'));
     }
 }
