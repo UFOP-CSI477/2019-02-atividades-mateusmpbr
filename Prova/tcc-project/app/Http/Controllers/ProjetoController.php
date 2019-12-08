@@ -16,7 +16,7 @@ class ProjetoController extends Controller
                         ->orderBy('ano','desc')
                         ->orderBy('semestre','desc')
                         ->orderBy('alunos.nome','asc')
-                        ->get();
+                        ->get('projetos.*');
 
         return view('geral.listar_projetos',compact('projetos'));
     }
