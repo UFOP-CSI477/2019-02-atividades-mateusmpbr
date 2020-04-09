@@ -24,4 +24,5 @@
   @endforeach
     </tbody>
   </table>
+  {!! $cidades->links() !!}
 @endsection
